@@ -5,6 +5,7 @@
  */
 package band.manager.rpg;
 
+import byui.cit260.bandManager.model.Bank;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Manager;
 
