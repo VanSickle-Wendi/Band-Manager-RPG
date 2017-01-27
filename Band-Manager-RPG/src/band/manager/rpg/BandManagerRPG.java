@@ -5,6 +5,7 @@
  */
 package band.manager.rpg;
 
+import byui.cit260.bandManager.model.Bank;
 import byui.cit260.bandManager.model.Manager;
 
 /**
@@ -24,6 +25,13 @@ public class BandManagerRPG {
         
         String managerInfo = managerOne.toString();
         System.out.println(managerInfo);
+        
+        Bank loanOne = new Bank();
+        
+        loanOne.setLoan(300);
+        
+        String bankInfo = loanOne.toString();
+        System.out.println(bankInfo);
     }
     
 }
