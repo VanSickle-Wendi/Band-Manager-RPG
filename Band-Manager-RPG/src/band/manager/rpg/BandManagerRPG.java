@@ -11,6 +11,7 @@ import byui.cit260.bandManager.model.Equipment;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.Manager;
+import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.Vehicle;
 
 /**
@@ -88,6 +89,18 @@ public class BandManagerRPG {
         String bandInfo = memberOne.toString();
         System.out.println(bandInfo);
         
+        //Map instance
+        Map theMap = new Map();
+        
+        theMap.setDistance(5.6);
+        theMap.setLocationNumber(15);
+        
+        String mapInfo = theMap.toString();
+        System.out.println(mapInfo);
+        
+        
+        
+       
         
     }
     
