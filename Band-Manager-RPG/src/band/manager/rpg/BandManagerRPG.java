@@ -14,6 +14,8 @@ import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Manager;
 import byui.cit260.bandManager.model.Map;
+import byui.cit260.bandManager.model.PayMoneyScene;
+import byui.cit260.bandManager.model.ReceiveMoneyScene;
 import byui.cit260.bandManager.model.Scenes;
 import byui.cit260.bandManager.model.Vehicle;
 
@@ -120,13 +122,30 @@ public class BandManagerRPG {
         String auditionsInfo = theAuditions.toString();
         System.out.println(auditionsInfo);
         
-                // Scenes Instance
+        // Scenes Instance
         Scenes sceneOne = new Scenes();
         
         sceneOne.setDescription("Here we are in fabulas Maui");
         
         String sceneInfo = sceneOne.toString();
         System.out.println(sceneInfo); 
+        
+        // ReceiveMoneyScene Instance
+        ReceiveMoneyScene receiveOne = new ReceiveMoneyScene();
+        
+        receiveOne.setMaxAmount(2500);
+        receiveOne.setMinAmount(500);        
+        
+        String receiveInfo = receiveOne.toString();
+        System.out.println(receiveInfo);  
+        
+        // PayMoneyScene Instance
+        PayMoneyScene payOne = new PayMoneyScene();
+        
+        payOne.setAmount(1000);
+           
+        String payInfo = payOne.toString();
+        System.out.println(payInfo); 
         
     }
     
