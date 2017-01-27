@@ -13,6 +13,7 @@ import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Manager;
 import byui.cit260.bandManager.model.Map;
+import byui.cit260.bandManager.model.Scenes;
 import byui.cit260.bandManager.model.Vehicle;
 
 /**
@@ -108,11 +109,14 @@ public class BandManagerRPG {
         String locationInfo = locationOne.toString();
         System.out.println(locationInfo); 
         
+        // Scenes Instance
+        Scenes sceneOne = new Scenes();
         
+        sceneOne.setDescription("Here we are in fabulas Maui");
         
-        
-       
-        
+        String sceneInfo = sceneOne.toString();
+        System.out.println(sceneInfo);         
+               
     }
     
 }
