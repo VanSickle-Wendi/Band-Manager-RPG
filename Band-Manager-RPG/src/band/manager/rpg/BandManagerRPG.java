@@ -6,6 +6,7 @@
 package band.manager.rpg;
 
 import byui.cit260.bandManager.model.Bank;
+import byui.cit260.bandManager.model.Equipment;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Manager;
 
@@ -41,6 +42,20 @@ public class BandManagerRPG {
         
         String bankInfo = loanOne.toString();
         System.out.println(bankInfo);
+        
+        //Equipment instance
+        Equipment equipmentInfo = new Equipment();
+        
+        equipmentInfo.setItem("Guitar");
+        equipmentInfo.setPrice(350.50);
+        equipmentInfo.setQualityLevel(4);
+        equipmentInfo.setCurrentlyOwned("Limo");
+        
+        String equipmentStuff = equipmentInfo.toString();
+        System.out.println(equipmentStuff);
+        
+        
+        
     }
     
 }
