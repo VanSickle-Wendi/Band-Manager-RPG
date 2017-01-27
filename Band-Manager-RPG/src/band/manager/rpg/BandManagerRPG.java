@@ -11,6 +11,7 @@ import byui.cit260.bandManager.model.Bank;
 import byui.cit260.bandManager.model.Equipment;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Instrument;
+import byui.cit260.bandManager.model.Location;
 import byui.cit260.bandManager.model.Manager;
 import byui.cit260.bandManager.model.Map;
 import byui.cit260.bandManager.model.Vehicle;
@@ -98,6 +99,16 @@ public class BandManagerRPG {
         
         String mapInfo = theMap.toString();
         System.out.println(mapInfo);
+               
+        // Location Instance
+        Location locationOne = new Location();
+        
+        locationOne.setName("Bank");
+        locationOne.setVisited("Yes");
+        
+        String locationInfo = locationOne.toString();
+        System.out.println(locationInfo); 
+        
         
         //Auditions instance
         Auditions theAuditions = new Auditions();
