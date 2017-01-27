@@ -9,7 +9,9 @@ import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.Bank;
 import byui.cit260.bandManager.model.Equipment;
 import byui.cit260.bandManager.model.Game;
+import byui.cit260.bandManager.model.Instrument;
 import byui.cit260.bandManager.model.Manager;
+import byui.cit260.bandManager.model.Vehicle;
 
 /**
  *
@@ -59,6 +61,22 @@ public class BandManagerRPG {
         
         String equipmentStuff = equipmentInfo.toString();
         System.out.println(equipmentStuff);
+        
+        //Vehicle instance
+        Vehicle vehicleInfo = new Vehicle();
+        
+        vehicleInfo.setMake("Mystery Machine");
+        
+        String vehicleStuff = vehicleInfo.toString();
+        System.out.println(vehicleStuff);
+        
+        //Instrument instance
+        Instrument instrumentInfo = new Instrument();
+        
+        instrumentInfo.setInstrumentType("Drums");
+        
+        String instrumentStuff = instrumentInfo.toString();
+        System.out.println(instrumentStuff);
         
         // Band Instance
         Band memberOne = new Band();
