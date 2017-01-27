@@ -109,6 +109,10 @@ public class BandManagerRPG {
         System.out.println(locationInfo); 
         
         
+        
+        
+       
+        
     }
     
 }
