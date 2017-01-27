@@ -34,6 +34,12 @@ public class BandManagerRPG {
         String gameInfo = gameStats.toString();
         System.out.println(gameInfo);
         
+        Bank loanOne = new Bank();
+        
+        loanOne.setLoan(300);
+        
+        String bankInfo = loanOne.toString();
+        System.out.println(bankInfo);
     }
     
 }
