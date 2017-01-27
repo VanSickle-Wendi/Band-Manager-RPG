@@ -5,6 +5,7 @@
  */
 package band.manager.rpg;
 
+import byui.cit260.bandManager.model.Auditions;
 import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.Bank;
 import byui.cit260.bandManager.model.Equipment;
@@ -109,14 +110,24 @@ public class BandManagerRPG {
         String locationInfo = locationOne.toString();
         System.out.println(locationInfo); 
         
-        // Scenes Instance
+        //Auditions instance
+        Auditions theAuditions = new Auditions();
+        
+        theAuditions.setBandPosition("Singer");
+        theAuditions.setChooseCity("Boise");
+        theAuditions.setSkillLevel(3);
+        
+        String auditionsInfo = theAuditions.toString();
+        System.out.println(auditionsInfo);
+        
+                // Scenes Instance
         Scenes sceneOne = new Scenes();
         
         sceneOne.setDescription("Here we are in fabulas Maui");
         
         String sceneInfo = sceneOne.toString();
-        System.out.println(sceneInfo);         
-               
+        System.out.println(sceneInfo); 
+        
     }
     
 }
