@@ -5,6 +5,7 @@
  */
 package band.manager.rpg;
 
+import byui.cit260.bandManager.model.Band;
 import byui.cit260.bandManager.model.Bank;
 import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Manager;
@@ -19,6 +20,7 @@ public class BandManagerRPG {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // Manager Instance
         Manager managerOne = new Manager();
         
         managerOne.setName("Barney");
@@ -27,6 +29,7 @@ public class BandManagerRPG {
         String managerInfo = managerOne.toString();
         System.out.println(managerInfo);
         
+        // Game Instance
         Game gameStats = new Game();
         
         gameStats.setTotalMoney(20000);
@@ -35,12 +38,27 @@ public class BandManagerRPG {
         String gameInfo = gameStats.toString();
         System.out.println(gameInfo);
         
+        // Bank Instance
         Bank loanOne = new Bank();
         
         loanOne.setLoan(300);
+        loanOne.setBankAccount(1500);
+        loanOne.setLoanPayment(500);
         
         String bankInfo = loanOne.toString();
         System.out.println(bankInfo);
+        
+        // Band Instance
+        Band memberOne = new Band();
+        
+        memberOne.setName("Captain Geech and the Shrimp Schack Shooters");
+        memberOne.setBandMembers("Nick Rhodes");
+        memberOne.setLocation("California");
+        
+        String bandInfo = memberOne.toString();
+        System.out.println(bandInfo);
+        
+        
     }
     
 }
