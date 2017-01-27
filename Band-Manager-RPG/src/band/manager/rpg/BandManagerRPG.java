@@ -5,6 +5,7 @@
  */
 package band.manager.rpg;
 
+import byui.cit260.bandManager.model.Game;
 import byui.cit260.bandManager.model.Manager;
 
 /**
@@ -24,6 +25,15 @@ public class BandManagerRPG {
         
         String managerInfo = managerOne.toString();
         System.out.println(managerInfo);
+        
+        Game gameStats = new Game();
+        
+        gameStats.setTotalMoney(20000);
+        gameStats.setPerformanceLevel(8);
+        
+        String gameInfo = gameStats.toString();
+        System.out.println(gameInfo);
+        
     }
     
 }
