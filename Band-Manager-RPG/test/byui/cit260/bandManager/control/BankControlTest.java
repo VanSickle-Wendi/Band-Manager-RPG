@@ -105,6 +105,20 @@ public class BankControlTest {
         expResult = -999;        
         result = instance.calcLoanPayment(loanBalance, rate, extraPrincipal);
         assertEquals(expResult, result, 0.0);
+        
+        /******************
+        * Test case #6
+        *****************/
+        System.out.println("\tTest #6");
+
+        loanBalance = 25500;
+        rate = .025;
+        extraPrincipal = 500;
+        // Create instance of BankControl class
+        //BankControl instance = new BankControl();
+        expResult = -999;        
+        result = instance.calcLoanPayment(loanBalance, rate, extraPrincipal);
+        assertEquals(expResult, result, 0.0);
     }
     
 }
