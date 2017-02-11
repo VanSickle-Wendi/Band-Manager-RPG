@@ -19,7 +19,7 @@ public class BankControl {
         return -999;
   }
  
-    if (extraPrincipal < 0 || extraPrincipal > 25000){
+    if (extraPrincipal > 0 || extraPrincipal < 25000){
         return -999;
   }
  
