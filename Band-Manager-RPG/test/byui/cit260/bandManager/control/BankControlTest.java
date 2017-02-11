@@ -99,7 +99,7 @@ public class BankControlTest {
 
         loanBalance = 15000;
         rate = .025;
-        extraPrincipal = 0;
+        extraPrincipal = -1;
         // Create instance of BankControl class
         //BankControl instance = new BankControl();
         expResult = -999;        
