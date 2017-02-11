@@ -12,7 +12,7 @@ package byui.cit260.bandManager.control;
 public class BankControl {
   public double calcLoanPayment(double loanBalance, double rate, double extraPrincipal) {
           
-    if (loanBalance <= 0 || loanBalance > 25000) {
+    if (loanBalance < 0 || loanBalance > 25625) {
         return -999;
   }
     if (rate != .025) {
