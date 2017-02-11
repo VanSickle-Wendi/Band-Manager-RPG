@@ -111,12 +111,40 @@ public class BankControlTest {
         *****************/
         System.out.println("\tTest #6");
 
-        loanBalance = 25500;
+        loanBalance = 25000;
         rate = .025;
-        extraPrincipal = 500;
+        extraPrincipal = 25500;
         // Create instance of BankControl class
         //BankControl instance = new BankControl();
         expResult = -999;        
+        result = instance.calcLoanPayment(loanBalance, rate, extraPrincipal);
+        assertEquals(expResult, result, 0.0);
+        
+         /******************
+        * Test case #7
+        *****************/
+        System.out.println("\tTest #7");
+
+        loanBalance = 0;
+        rate = .025;
+        extraPrincipal = 0;
+        // Create instance of BankControl class
+        //BankControl instance = new BankControl();
+        expResult = 0;        
+        result = instance.calcLoanPayment(loanBalance, rate, extraPrincipal);
+        assertEquals(expResult, result, 0.0);
+        
+         /******************
+        * Test case #8
+        *****************/
+        System.out.println("\tTest #8");
+
+        loanBalance = 25000;
+        rate = .025;
+        extraPrincipal = 25000;
+        // Create instance of BankControl class
+        //BankControl instance = new BankControl();
+        expResult = 25625;        
         result = instance.calcLoanPayment(loanBalance, rate, extraPrincipal);
         assertEquals(expResult, result, 0.0);
     }
