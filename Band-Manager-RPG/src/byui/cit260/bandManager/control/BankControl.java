@@ -26,9 +26,21 @@ public class BankControl {
     double loanPayment = (loanBalance * rate) + extraPrincipal; 
         return loanPayment;
            
-          
 }
-  
+ 
+    public double calcBandSalary(double venuePayment, double equipmentCost, double fuelCost, double hotelCost, double salaryPercentage) {
+ 
+    if (salaryPercentage <= 0 || salaryPercentage > .50){
+      return -999; 
+              
+    }
+    
+    double netIncome = (venuePayment) - (equipmentCost + fuelCost + hotelCost); 
+    double bandSalary =  netIncome * salaryPercentage;
+ 
+       return bandSalary;
+
+        }
 }
 
     
