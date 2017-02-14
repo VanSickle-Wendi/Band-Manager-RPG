@@ -37,10 +37,10 @@ public class PerformanceControlTest {
     public void testCalcPerfomanceLevel() {
         
         PerformanceControl instance = new PerformanceControl();
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
         RandomMock testRandom = new RandomMock(1,2);
         
-        instance.setRandomGenerator(testRandom);
-        
+        instance.setRandomGenerator(testRandom);      
         
         System.out.println("calcPerfomanceLevel");
         /******************
@@ -51,7 +51,6 @@ public class PerformanceControlTest {
         double skillLevel = 75;
         double issueCost = 58;
         double equipmentCost = 1000;
-      //  PerformanceControl instance = new PerformanceControl();
         double expResult = 219;
         double result = instance.calcPerfomanceLevel(skillLevel, issueCost, equipmentCost);
         assertEquals(expResult, result, 0.0);
@@ -61,8 +60,9 @@ public class PerformanceControlTest {
          * Test case #2
          *****************/
         System.out.println("\tTest #2");        
-
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
         testRandom.setSequence(0,3);
+        
         skillLevel = 65;
         issueCost = 75;
         equipmentCost = 300;
@@ -74,8 +74,9 @@ public class PerformanceControlTest {
          * Test case #3
          *****************/
         System.out.println("\tTest #3");        
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
+        testRandom.setSequence(2,1);   
         
-        testRandom.setSequence(2,1);        
         skillLevel = 100;
         issueCost = 150;
         equipmentCost = 500;
@@ -87,8 +88,9 @@ public class PerformanceControlTest {
          * Test case #4
          *****************/
         System.out.println("\tTest #4");        
-
-        testRandom.setSequence(0,2);        
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
+        testRandom.setSequence(0,2);
+        
         skillLevel = 50;
         issueCost = 20;
         equipmentCost = 40;
@@ -100,8 +102,9 @@ public class PerformanceControlTest {
          * Test case #5
          *****************/
         System.out.println("\tTest #5");        
-
-        testRandom.setSequence(1,3);        
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
+        testRandom.setSequence(1,3);   
+        
         skillLevel = 75;
         issueCost = -25;
         equipmentCost = 750;
@@ -113,8 +116,9 @@ public class PerformanceControlTest {
          * Test case #6
          *****************/
         System.out.println("\tTest #6");        
-
-        testRandom.setSequence(0,1);        
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
+        testRandom.setSequence(0,1);  
+        
         skillLevel = 50;
         issueCost = 75;
         equipmentCost = 3000;
@@ -127,7 +131,8 @@ public class PerformanceControlTest {
          *****************/
         System.out.println("\tTest #7");        
 
-        testRandom.setSequence(2,3);        
+        testRandom.setSequence(2,3); 
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
         skillLevel = 50;
         issueCost = 0;
         equipmentCost = 50;
@@ -139,8 +144,9 @@ public class PerformanceControlTest {
          * Test case #8
          *****************/
         System.out.println("\tTest #8");        
-
-        testRandom.setSequence(0,0);        
+        //Assign "random" numbers for test #1 (1 number less than actual test numbers)
+        testRandom.setSequence(0,0); 
+        
         skillLevel = 100;
         issueCost = 100;
         equipmentCost = 2000;

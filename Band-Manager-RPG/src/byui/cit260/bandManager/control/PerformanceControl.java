@@ -21,8 +21,7 @@ public class PerformanceControl {
             this.randomGenerator = randomGenerator;
         }
         
-
-//My code    
+//Shandi code    
     public double calcPerfomanceLevel(double skillLevel, double issueCost, double equipmentCost) {
     
         if (skillLevel !=50 && skillLevel != 75 && skillLevel != 100) {
@@ -37,15 +36,15 @@ public class PerformanceControl {
         return -999;
         }
         
-      //  Random randomIssue = new Random(); 
+      // Assign randomGenerator, with range 1 to 3, to tempIssue variable
         int tempIssue = randomGenerator.nextInt(3) + 1;
-     // int tempIssue = (int) ( Math.random() * 2 + 1);
+      // Divide issueCost by random number between 1 and 3 and assign to issue variable
         double issue = Math.ceil(issueCost / tempIssue);
         
-      //  Random randomEquipmentCost = new Random(); 
+      // Assign randomGenerator, with range 1 to 4, to tempEquipmentCost variable
         int tempEquipmentCost = randomGenerator.nextInt(4) + 1;
         
-     // int tempEquipmentCost = (int) ( Math.random() * 2 + 1);
+      // Divide equipmentCost by random number between 1 and 4 and assign to equipment variable
         double equipment = Math.ceil(equipmentCost / tempEquipmentCost);
         
         double performanceLevel = (skillLevel + issue + equipment) / 2;
