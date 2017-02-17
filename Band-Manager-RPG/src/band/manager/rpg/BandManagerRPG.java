@@ -18,6 +18,7 @@ import byui.cit260.bandManager.model.PayMoneyScene;
 import byui.cit260.bandManager.model.ReceiveMoneyScene;
 import byui.cit260.bandManager.model.Scenes;
 import byui.cit260.bandManager.model.Vehicle;
+import byui.cit260.bandManager.view.StartProgramView;
 
 /**
  *
@@ -30,6 +31,9 @@ public class BandManagerRPG {
      */
     public static void main(String[] args) {
      
+        //create StartProgramViewOrig and display the start program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
         
     }
     
