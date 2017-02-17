@@ -18,6 +18,7 @@ import byui.cit260.bandManager.model.PayMoneyScene;
 import byui.cit260.bandManager.model.ReceiveMoneyScene;
 import byui.cit260.bandManager.model.Scenes;
 import byui.cit260.bandManager.model.Vehicle;
+import byui.cit260.bandManager.view.StartProgramView;
 
 /**
  *
@@ -29,123 +30,9 @@ public class BandManagerRPG {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Manager Instance
-        Manager managerOne = new Manager();
-        
-        managerOne.setName("Barney");
-        managerOne.setFinalNetWorth(100);
-        
-        String managerInfo = managerOne.toString();
-        System.out.println(managerInfo);
-        
-        // Game Instance
-        Game gameStats = new Game();
-        
-        gameStats.setTotalMoney(20000);
-        gameStats.setPerformanceLevel(8);
-        
-        String gameInfo = gameStats.toString();
-        System.out.println(gameInfo);
-        
-        // Bank Instance
-        Bank loanOne = new Bank();
-        
-        loanOne.setLoan(300);
-        loanOne.setBankAccount(1500);
-        loanOne.setLoanPayment(500);
-        
-        String bankInfo = loanOne.toString();
-        System.out.println(bankInfo);
-        
-        //Equipment instance
-        Equipment equipmentInfo = new Equipment();
-        
-        equipmentInfo.setItem("Guitar");
-        equipmentInfo.setPrice(350.50);
-        equipmentInfo.setQualityLevel(4);
-        equipmentInfo.setCurrentlyOwned("Limo");
-        
-        String equipmentStuff = equipmentInfo.toString();
-        System.out.println(equipmentStuff);
-        
-        //Vehicle instance
-        Vehicle vehicleInfo = new Vehicle();
-        
-        vehicleInfo.setMake("Mystery Machine");
-        
-        String vehicleStuff = vehicleInfo.toString();
-        System.out.println(vehicleStuff);
-        
-        //Instrument instance
-        Instrument instrumentInfo = new Instrument();
-        
-        instrumentInfo.setInstrumentType("Drums");
-        
-        String instrumentStuff = instrumentInfo.toString();
-        System.out.println(instrumentStuff);
-        
-        // Band Instance
-        Band memberOne = new Band();
-        
-        memberOne.setName("Captain Geech and the Shrimp Schack Shooters");
-        memberOne.setBandMembers("Nick Rhodes");
-        memberOne.setLocation("California");
-        
-        String bandInfo = memberOne.toString();
-        System.out.println(bandInfo);
-        
-        //Map instance
-        Map theMap = new Map();
-        
-        theMap.setDistance(5.6);
-        theMap.setLocationNumber(15);
-        
-        String mapInfo = theMap.toString();
-        System.out.println(mapInfo);
-               
-        // Location Instance
-        Location locationOne = new Location();
-        
-        locationOne.setName("Bank");
-        locationOne.setVisited("Yes");
-        
-        String locationInfo = locationOne.toString();
-        System.out.println(locationInfo); 
-        
-        //Auditions instance
-        Auditions theAuditions = new Auditions();
-        
-        theAuditions.setBandPosition("Singer");
-        theAuditions.setChooseCity("Boise");
-        theAuditions.setSkillLevel(3);
-        
-        String auditionsInfo = theAuditions.toString();
-        System.out.println(auditionsInfo);
-        
-        // Scenes Instance
-        Scenes sceneOne = new Scenes();
-        
-        sceneOne.setDescription("Here we are in fabulas Maui");
-        
-        String sceneInfo = sceneOne.toString();
-        System.out.println(sceneInfo); 
-        
-        // ReceiveMoneyScene Instance
-        ReceiveMoneyScene receiveOne = new ReceiveMoneyScene();
-        
-        receiveOne.setMaxAmount(2500);
-        receiveOne.setMinAmount(500);        
-        
-        String receiveInfo = receiveOne.toString();
-        System.out.println(receiveInfo);  
-        
-        // PayMoneyScene Instance
-        PayMoneyScene payOne = new PayMoneyScene();
-        
-        payOne.setAmount(1000);
-           
-        String payInfo = payOne.toString();
-        System.out.println(payInfo); 
+        //create StartProgramViewOrig and display the start program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
         
     }
     
