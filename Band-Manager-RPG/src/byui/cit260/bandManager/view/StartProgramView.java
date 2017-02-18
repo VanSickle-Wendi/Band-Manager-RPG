@@ -5,6 +5,10 @@
  */
 package byui.cit260.bandManager.view;
 
+import byui.cit260.bandManager.control.GameControl;
+import byui.cit260.bandManager.model.Manager;
+import java.util.Scanner;
+
 /**
  *
  * @author Wendi
@@ -59,6 +63,7 @@ public class StartProgramView {
         );
 
     }
+    
     /**
      * displays the start program view
      */
@@ -78,13 +83,39 @@ public class StartProgramView {
     }
 
     private String getbandManagersName() {
-        System.out.println("\n*** getBandManagersName() called***");
-        return "Joe";
+        
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+        String value = ""; // value to be returned
+        boolean valid = false; // initialize to not valid
+        
+        while (!valid) { //loop while an invalid value is entered
+                System.out.println("\n" + this.promptMessage);
+                
+                value = keyboard.nextLine(); // get next line typed on keyboard
+                value = value.trim(); // trim off leading and trailing blanks
+                
+                if (value.length() <1){ // value is blank
+                    System.out.println("\nInvalid value: value can not be blank");
+                    continue;
+                }              
+                break; // end the loop
+        }
+        
+        return value; // return the value entered
     }
 
-    private boolean doAction(String bandManagersName) {
-        System.out.println("\n*** doAction() called***");
-        return true;
-    }
-    
+    private boolean doAction(String bandManagersName) {       
+        if (bandManagersName.length() < 2) {
+            System.out.println("\nInvalid band manager's name:"
+                    + "The name must be greater than one character in length");
+            return false;
+        }       
+        // call createManager() control function
+        Manager manager = GameControl.createManager(bandManagersName);
+        
+        if (manager == null) { // if unsuccessful
+            System.out.println("\nError creating the manager.");
+            return false;
+        }
+    }    
 }
