@@ -119,11 +119,11 @@ public class StartProgramView {
         }
         
         // display next view
-        this.displayNextView();
+        this.displayNextView(manager);
         return true; // success !
     }
 
-    private void displayNextView() {
+    private void displayNextView(Manager manager) {
         System.out.println("\n*** displayNextView() called ***");
     }
 }
