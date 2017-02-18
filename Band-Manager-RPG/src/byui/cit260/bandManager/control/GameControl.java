@@ -5,6 +5,7 @@
  */
 package byui.cit260.bandManager.control;
 
+import band.manager.rpg.BandManagerRPG;
 import byui.cit260.bandManager.model.Manager;
 
 /**
@@ -13,9 +14,18 @@ import byui.cit260.bandManager.model.Manager;
  */
 public class GameControl {
 
-    public static Manager createManager(String bandManagersName) {
-        System.out.println("\n*** createManager() function called ***");
-        return new Manager();
+    public static Manager createManager(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Manager manager = new Manager();
+        manager.setName(name);
+        
+        BandManagerRPG.setManager(manager); // save the manager
+        
+        return manager;
     }
 
 }

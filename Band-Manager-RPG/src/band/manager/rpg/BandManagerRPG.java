@@ -25,6 +25,9 @@ import byui.cit260.bandManager.view.StartProgramView;
  * @author shaza
  */
 public class BandManagerRPG {
+    
+    private static Game currentGame = null;
+    private static Manager manager = null;
 
     /**
      * @param args the command line arguments
@@ -35,6 +38,22 @@ public class BandManagerRPG {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
         
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        BandManagerRPG.currentGame = currentGame;
+    }
+
+    public static Manager getManager() {
+        return manager;
+    }
+
+    public static void setManager(Manager manager) {
+        BandManagerRPG.manager = manager;
     }
     
 }
