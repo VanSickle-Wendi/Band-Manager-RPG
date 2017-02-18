@@ -17,5 +17,5 @@ public class GameControl {
         System.out.println("\n*** createManager() function called ***");
         return new Manager();
     }
-    
+
 }
