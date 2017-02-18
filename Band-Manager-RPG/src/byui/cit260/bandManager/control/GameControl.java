@@ -5,10 +5,17 @@
  */
 package byui.cit260.bandManager.control;
 
+import byui.cit260.bandManager.model.Manager;
+
 /**
  *
  * @author shaza
  */
 public class GameControl {
+
+    public static Manager createManager(String bandManagersName) {
+        System.out.println("\n*** createManager() function called ***");
+        return new Manager();
+    }
     
 }
