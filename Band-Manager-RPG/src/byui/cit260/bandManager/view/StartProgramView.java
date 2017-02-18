@@ -74,9 +74,8 @@ public class StartProgramView {
             // prompt for a get band manager's name
             String bandManagersName = this.getbandManagersName();
             if (bandManagersName.toUpperCase().equals("Q")) //user wants to quit
-            {
                 return; //exit the game
-            }
+            
             // do the requested action and display the next view
             done = this.doAction(bandManagersName);
         } while (!done);
