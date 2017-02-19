@@ -34,7 +34,7 @@ public class MainMenuView {
     }
 
     public void displayMainMenuView() {
-
+        System.out.println(menu);
         boolean done = false; // set flag to not done
         do {
             //prompt for and get menu option
@@ -89,6 +89,7 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             default:
+                // System.out.println(menu);
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
