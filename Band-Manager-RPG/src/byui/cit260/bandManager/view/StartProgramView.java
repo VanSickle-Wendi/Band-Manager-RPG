@@ -98,7 +98,7 @@ public class StartProgramView {
                 System.out.println("\nInvalid value: The value can not be blank");
                 continue;
             }
-            break; //end the loop
+            valid = true; //end the loop
         }
 
         return value; // return the value entered       

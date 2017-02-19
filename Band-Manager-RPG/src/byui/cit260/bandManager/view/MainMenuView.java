@@ -5,50 +5,75 @@
  */
 package byui.cit260.bandManager.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Wendi
  */
 public class MainMenuView {
-    
+
     private String menu;
-    
+    private String promptMessage;
+
     public MainMenuView() {
         this.menu = "\n"
-                  + "\n--------------------------------------------------"
-                  + "\n|  Main Menu                                     |"
-                  + "\n--------------------------------------------------"
-                  + "\nN -- Start new game"
-                  + "\nL -- Load a saved game"
-                  + "\nH -- Help on how to play the game"
-                  + "\nS -- Save game"
-                  + "\nQ -- Quit"
-                  + "\n--------------------------------------------------";
+                + "\n--------------------------------------------------"
+                + "\n|  Main Menu                                     |"
+                + "\n--------------------------------------------------"
+                + "\nN -- Start new game"
+                + "\nL -- Load a saved game"
+                + "\nH -- Help on how to play the game"
+                + "\nS -- Save game"
+                + "\nQ -- Quit"
+                + "\n--------------------------------------------------";
+
+        this.promptMessage = "\nPlease choose a Menu Option: ";
+        // display the Main Menu
+        this.displayMainMenuView();
     }
 
     public void displayMainMenuView() {
-       
-       boolean done = false; // set flag to not done
-       do {
-           //prompt for and get players name
-           String menuOption = this.getMenuOption();
-           if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-               return; // exit the game
-           
-           // do the requested action and display the next view
-           done = this.doAction(menuOption);
-           
-       } while (!done);
+
+        boolean done = false; // set flag to not done
+        do {
+            //prompt for and get menu option
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
+            {
+                return; // exit the game
+            }
+            // do the requested action and display the next view
+            done = this.doAction(menuOption);
+
+        } while (!done);
     }
 
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
+
+        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
+        String value = ""; // value to be returned
+        boolean valid = false; //initialize to not valid
+
+        while (!valid) { // loop while an invalid value is entered
+            System.out.println("\n" + this.promptMessage);
+
+            value = keyboard.nextLine(); //get next line typed on keyboard
+            value = value.trim(); // trim off leading and trailing blanks
+
+            if (value.length() < 1) { // value is blank
+                System.out.println("\nInvalid value: The value can not be blank");
+                continue;
+            }
+            valid = true; //end the loop
+        }
+
+        return value; // return the value entered       
     }
 
     private boolean doAction(String menuOption) {
         System.out.println("\n*** doAction() function called ***");
         return true;
     }
-    
+
 }
