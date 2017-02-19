@@ -9,7 +9,22 @@ package byui.cit260.bandManager.view;
  *
  * @author Wendi
  */
-class MainMenuView {
+public class MainMenuView {
+    
+    private String menu;
+    
+    public MainMenuView() {
+        this.menu = "\n"
+                  + "\n--------------------------------------------------"
+                  + "\n|  Main Menu                                     |"
+                  + "\n--------------------------------------------------"
+                  + "\nN -- Start new game"
+                  + "\nL -- Load a saved game"
+                  + "\nH -- Help on how to play the game"
+                  + "\nS -- Save game"
+                  + "\nQ -- Quit"
+                  + "\n--------------------------------------------------";
+    }
 
     void displayMainMenuView() {
         System.out.println("\n*** displayMenu() function called ***");
