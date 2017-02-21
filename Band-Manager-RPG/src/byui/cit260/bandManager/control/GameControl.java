@@ -27,5 +27,8 @@ public class GameControl {
         
         return manager;
     }
-
+    
+    public static void createNewGame(Manager manager) {
+        System.out.println("\n*** createNewGame stub function called ***");
+    }
 }
