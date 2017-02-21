@@ -91,7 +91,7 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             default:
-             // System.out.println(menu); 
+                // System.out.println(menu);
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
@@ -99,6 +99,7 @@ public class MainMenuView {
         return false;
     }
     private void startNewGame() {
+        // create new game
         // create a new game
         GameControl.createNewGame(BandManagerRPG.getManager());
         

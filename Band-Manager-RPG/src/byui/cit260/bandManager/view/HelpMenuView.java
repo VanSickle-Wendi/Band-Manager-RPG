@@ -24,11 +24,11 @@ public class HelpMenuView {
                 + "\nG -- What is the goal of the game?"
                 + "\nL -- How to make payments or pay off the loan"
                 + "\nU -- How to upgrade instruments/equipment"
-                + "\nP -- Pro Tips"
+                + "\nT -- Pro Tips"
                 + "\nQ -- Quit"
                 + "\n--------------------------------------------------";
 
-        this.promptMessage = "\nPlease choose a Menu Option: ";
+        this.promptMessage = "\nPlease choose a Help Menu Option: ";
         // display the help menu
         this.displayHelpMenuView();
     }
@@ -110,5 +110,5 @@ public class HelpMenuView {
 
     private void proTips() {
         System.out.println("*** proTips function called ***");
-    }        
+    }  
 }
