@@ -5,37 +5,35 @@
  */
 package byui.cit260.bandManager.view;
 
-import band.manager.rpg.BandManagerRPG;
-import byui.cit260.bandManager.control.GameControl;
 import java.util.Scanner;
 
 /**
  *
- * @author Wendi
+ * @author shaza
  */
-public class MainMenuView {
-
+public class HelpMenuView {
+    
     private String menu;
     private String promptMessage;
 
-    public MainMenuView() {
+    public HelpMenuView() {
         this.menu = "\n"
                 + "\n--------------------------------------------------"
-                + "\n|  Main Menu                                     |"
+                + "\n|  Help Menu                                     |"
                 + "\n--------------------------------------------------"
-                + "\nN -- Start new game"
-                + "\nL -- Load a saved game"
-                + "\nH -- Help on how to play the game"
-                + "\nS -- Save game"
+                + "\nG -- What is the goal of the game?"
+                + "\nL -- How to make payments or pay off the loan"
+                + "\nU -- How to upgrade instruments/equipment"
+                + "\nP -- Pro Tips"
                 + "\nQ -- Quit"
                 + "\n--------------------------------------------------";
 
         this.promptMessage = "\nPlease choose a Menu Option: ";
-        // display the main menu
-        this.displayMainMenuView();
+        // display the help menu
+        this.displayHelpMenuView();
     }
 
-    public void displayMainMenuView() {
+    public void displayHelpMenuView() {
         System.out.println(menu);
         boolean done = false; // set flag to not done
         do {
@@ -78,17 +76,17 @@ public class MainMenuView {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
-            case "N": // create and start a new game
-                this.startNewGame();
+            case "G": // goal of the game
+                this.goalOfGame();
                 break;
-            case "L": // get and start an existing game
-                this.startExistingGame();
+            case "L": // payment and payoff of loan
+                this.payOnLoan();
                 break;
-            case "H": // display the help menu
-                this.displayHelpMenu();
+            case "U": // upgrade instruments/equipment
+                this.upgradeInstruments();
                 break;
-            case "S": // save the current game
-                this.saveGame();
+            case "T": // pro tips
+                this.proTips();
                 break;
             default:
              // System.out.println(menu); 
@@ -98,27 +96,19 @@ public class MainMenuView {
         
         return false;
     }
-    private void startNewGame() {
-        // create a new game
-        GameControl.createNewGame(BandManagerRPG.getManager());
-        
-        // display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void goalOfGame() {
+        System.out.println("*** goalOfGame function called ***");
     }
     
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
+    private void payOnLoan() {
+        System.out.println("*** payOnLoan function called ***");
     }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void upgradeInstruments() {
+        System.out.println("*** upgradeInstruments function called ***");
     }
 
-    private void displayHelpMenu() {
-        
-        // display the help menu
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
-    }    
+    private void proTips() {
+        System.out.println("*** proTips function called ***");
+    }        
 }
