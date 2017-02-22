@@ -31,7 +31,7 @@ public class GameMenuView {
                 + "\nR -- Rehearsal" 
                 + "\nP -- Venue performance" 
                 + "\nB -- View band members and status" 
-                + "\nL - Check loan status/make payment"                 
+                + "\nL -- Check loan status/make payment"                 
                 + "\nS -- Save game"
                 + "\nQ -- Quit Game Menu"
                 + "\n--------------------------------------------------";

@@ -101,19 +101,42 @@ public class HelpMenuView {
     }
     
     private void goalOfGame() {
-        System.out.println("*** goalOfGame function called ***");
+        System.out.println("\n"
+                + "\n--------------------------------------------------"
+                + "\n The goal of the game is to take your band to     "
+                + "\n the highest star status while paying off your    "
+                + "\n loan and becoming a financial success yourself.  "
+                + "\n--------------------------------------------------"       
+        );
     }
     
     private void payOnLoan() {
-        System.out.println("*** payOnLoan function called ***");
+        System.out.println("\n"
+                + "\n--------------------------------------------------"
+                + "\n The process for paying on your loan has not been "
+                + "\n defined yet.                                     "
+                + "\n                                                  "
+                + "\n--------------------------------------------------"       
+        );        
     }
 
     private void upgradeInstruments() {
-        System.out.println("*** upgradeInstruments function called ***");
+        System.out.println("\n"
+                + "\n--------------------------------------------------"
+                + "\n The process for upgrading instruments has not    "
+                + "\n been defined yet.                                "
+                + "\n                                                  "
+                + "\n--------------------------------------------------"       
+        );          
     }
 
     private void proTips() {
-        System.out.println("*** proTips function called ***");
+        System.out.println("\n"
+                + "\n There are no pros giving any tips yet.           "
+                + "\n                                                  "
+                + "\n                                                  "
+                + "\n--------------------------------------------------"       
+        );         
     }    
     
 }
