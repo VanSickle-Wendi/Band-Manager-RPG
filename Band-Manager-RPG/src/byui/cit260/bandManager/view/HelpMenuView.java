@@ -34,9 +34,10 @@ public class HelpMenuView {
     }
 
     public void displayHelpMenuView() {
-        System.out.println(menu);
+       // System.out.println(menu);
         boolean done = false; // set flag to not done     
         do {
+            System.out.println(menu);
             //prompt for and get menu option
             String menuOption = this.getMenuOption();           
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
@@ -82,19 +83,21 @@ public class HelpMenuView {
             case "L": // payments and payoff of loan
                 this.payOnLoan();
                 break;
-            case "U": // upgrade instruments/equipment
+            case "U": // upgrade instruments/equipmenth             
                 this.upgradeInstruments();
                 break;
             case "T": // pro tips
                 this.proTips();
                 break;
+            case "Q": // Quit
+                return true;                
             default:
                 // System.out.println(menu);
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
         
-        return true;
+        return false;
     }
     
     private void goalOfGame() {
