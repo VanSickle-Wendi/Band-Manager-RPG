@@ -27,12 +27,12 @@ public class MainMenuView {
                 + "\nL -- Load a saved game"
                 + "\nH -- Help on how to play the game"
                 + "\nS -- Save game"
-                + "\nQ -- Hit 'Q' <ENTER> 'Q' <ENTER> to Exit Game"
+                + "\nQ -- Quit and Exit Game"
                 + "\n--------------------------------------------------";
 
         this.promptMessage = "\nPlease choose a Main Menu Option: ";
         // display the main menu
-        this.displayMainMenuView();
+        //this.displayMainMenuView();
     }
 
     public void displayMainMenuView() {

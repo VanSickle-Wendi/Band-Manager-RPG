@@ -33,12 +33,12 @@ public class GameMenuView {
                 + "\nB -- View band members and status" 
                 + "\nL - Check loan status/make payment"                 
                 + "\nS -- Save game"
-                + "\nQ -- Exit"
+                + "\nQ -- Quit Game Menu"
                 + "\n--------------------------------------------------";
 		         
         this.promptMessage = "\nPlease choose a Game Menu Option: ";
         // display the game menu
-        this.displayGameMenuView();
+        //this.displayGameMenuView();
     }
 
     public void displayGameMenuView() {
