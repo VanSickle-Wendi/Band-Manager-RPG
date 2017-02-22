@@ -23,7 +23,7 @@ public class GameMenuView {
                 + "\n--------------------------------------------------"
                 + "\nM -- View Map"
                 + "\nA -- Asset Menu"
-                + "\nH -- Hold audition"
+                + "\nH -- Hold Audition Menu"
                 + "\nT -- Travel to a new location"
                 + "\nX -- Check-in to hotel" 
                 + "\nR -- Rehearsal" 
@@ -89,7 +89,7 @@ public class GameMenuView {
                 this.assetMenu();
                 break;
             case "H": // display audition view
-                this.holdAudition();
+                this.holdAuditionMenu();
                 break;
             case "T": // Travel to new location
                 this.travelLoacation();
@@ -125,13 +125,15 @@ public class GameMenuView {
     }
 
     private void assetMenu() {
-        // display the help menu
+        // display the asset menu
         AssetMenuView assetMenu = new AssetMenuView();
         assetMenu.displayAssetMenuView();        
     }
 
-    private void holdAudition() {
-        System.out.println("*** holdAudition function called ***");
+    private void holdAuditionMenu() {
+        // display the hold audition view
+        HoldAuditionMenuView holdAuditionMenu = new HoldAuditionMenuView();
+        holdAuditionMenu.displayHoldAuditionMenuView(); 
     }
 
     private void travelLoacation() {

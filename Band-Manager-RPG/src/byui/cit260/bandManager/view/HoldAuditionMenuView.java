@@ -5,41 +5,38 @@
  */
 package byui.cit260.bandManager.view;
 
-import band.manager.rpg.BandManagerRPG;
-import byui.cit260.bandManager.control.GameControl;
 import java.util.Scanner;
 
 /**
  *
  * @author Wendi
  */
-public class MainMenuView {
+class HoldAuditionMenuView {
 
     private String menu;
-    private String promptMessage;
-
-    public MainMenuView() {
+    private String promptMessage;    
+    
+    public HoldAuditionMenuView() {
         this.menu = "\n"
                 + "\n--------------------------------------------------"
-                + "\n|  Main Menu                                     |"
+                + "\n|  Hold Audition Menu                                     |"
                 + "\n--------------------------------------------------"
-                + "\nN -- Start new game"
-                + "\nL -- Load a saved game"
-                + "\nH -- Help on how to play the game"
-                + "\nS -- Save game"
-                + "\nQ -- Quit and Exit Game"
+                + "\nD -- Drummer"
+                + "\nG -- Guitarist"
+                + "\nB -- Bass Player"
+                + "\nK -- Keyboardist"
+                + "\nS -- Singer" 
+                + "\nQ -- Quit"
                 + "\n--------------------------------------------------";
-
-        this.promptMessage = "\nPlease choose a Main Menu Option: ";
-        // display the main menu
-        //this.displayMainMenuView();
+		         
+        this.promptMessage = "\nPlease choose a Hold Audition Menu Option: ";
     }
 
-    public void displayMainMenuView() {
-       // System.out.println(menu);
+    public void displayHoldAuditionMenuView() {
+        //System.out.println(menu);
         boolean done = false; // set flag to not done
         do {
-            System.out.println(menu);
+        System.out.println(menu);            
             //prompt for and get menu option
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
@@ -79,20 +76,23 @@ public class MainMenuView {
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
-            case "N": // create and start a new game
-                this.startNewGame();
+            case "D": // drummer
+                this.drummer();
                 break;
-            case "L": // get and start an existing game
-                this.startExistingGame();
+            case "G": // guitarist
+                this.guitarist();
                 break;
-            case "H": // display the help menu
-                this.displayHelpMenu();
+            case "B": // bass guitarist
+                this.bassGuitarist();
                 break;
-            case "S": // save the current game
-                this.saveGame();
+            case "K": // Keyboardist
+                this.keyboardist();
+                break;
+            case "S": // singer
+                this.singer();
                 break;
             case "Q": // Quit
-                return true; 
+                return true;                 
             default:
                 // System.out.println(menu);
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -100,28 +100,26 @@ public class MainMenuView {
         }
         
         return false;
-    }
-    private void startNewGame() {
-        // create a new game
-        GameControl.createNewGame(BandManagerRPG.getManager());
-        
-        // display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
-    }
-    
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function called ***");
-    }
-
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
-    }
-
-    private void displayHelpMenu() {
-        
-        // display the help menu
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayHelpMenuView();
     }    
+
+    private void drummer() {
+        System.out.println("*** drummer function called ***");        
+    }
+
+    private void guitarist() {
+        System.out.println("*** guitarist function called ***");     
+    }
+
+    private void bassGuitarist() {
+        System.out.println("*** bassGuitarist function called ***"); 
+    }
+
+    private void keyboardist() {
+        System.out.println("*** keyboardist function called ***");        
+    }
+
+    private void singer() {
+        System.out.println("*** singer function called ***");          
+    }  
+    
 }
