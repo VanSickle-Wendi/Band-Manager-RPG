@@ -7,10 +7,10 @@ package byui.cit260.bandManager.view;
 
 /**
  *
- * @author shaza
+ * @author Wendi
  */
 public class GameMenuView {
-
+    
     void displayMenu() {
         System.out.println("\n*** displayMenu stub function called ***");
     }

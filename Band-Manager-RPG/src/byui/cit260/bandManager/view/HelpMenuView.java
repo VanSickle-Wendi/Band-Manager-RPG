@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author shaza
+ * @author Wendi
  */
 public class HelpMenuView {
     
@@ -21,11 +21,11 @@ public class HelpMenuView {
                 + "\n--------------------------------------------------"
                 + "\n|  Help Menu                                     |"
                 + "\n--------------------------------------------------"
-                + "\nG -- What is the goal of the game?"
+                + "\nG -- What is the goal of the Game?"
                 + "\nL -- How to make payments or pay off the loan"
                 + "\nU -- How to upgrade instruments/equipment"
                 + "\nT -- Pro Tips"
-                + "\nQ -- Quit"
+                + "\nQ -- Hit 'Q' <ENTER> 3 times for Main Menu "
                 + "\n--------------------------------------------------";
 
         this.promptMessage = "\nPlease choose a Help Menu Option: ";
@@ -35,10 +35,10 @@ public class HelpMenuView {
 
     public void displayHelpMenuView() {
         System.out.println(menu);
-        boolean done = false; // set flag to not done
+        boolean done = false; // set flag to not done     
         do {
             //prompt for and get menu option
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getMenuOption();           
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
             {
                 return; // exit the game
@@ -72,14 +72,14 @@ public class HelpMenuView {
     }
 
     public boolean doAction(String choice) {
-        
+               
         choice = choice.toUpperCase(); // convert choice to upper case
         
         switch (choice) {
             case "G": // goal of the game
                 this.goalOfGame();
                 break;
-            case "L": // payment and payoff of loan
+            case "L": // payments and payoff of loan
                 this.payOnLoan();
                 break;
             case "U": // upgrade instruments/equipment
@@ -89,13 +89,14 @@ public class HelpMenuView {
                 this.proTips();
                 break;
             default:
-             // System.out.println(menu); 
+                // System.out.println(menu);
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
         
-        return false;
+        return true;
     }
+    
     private void goalOfGame() {
         System.out.println("*** goalOfGame function called ***");
     }
@@ -110,5 +111,6 @@ public class HelpMenuView {
 
     private void proTips() {
         System.out.println("*** proTips function called ***");
-    }  
+    }    
+    
 }
