@@ -91,7 +91,7 @@ public class MainMenuView {
             case "S": // save the current game
                 this.saveGame();
                 break;
-                case "Q": // Quit
+            case "Q": // Quit
                 return true; 
             default:
                 // System.out.println(menu);
