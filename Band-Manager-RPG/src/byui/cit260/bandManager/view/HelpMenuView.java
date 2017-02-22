@@ -25,12 +25,12 @@ public class HelpMenuView {
                 + "\nL -- How to make payments or pay off the loan"
                 + "\nU -- How to upgrade instruments/equipment"
                 + "\nT -- Pro Tips"
-                + "\nQ -- Hit 'Q' <ENTER> 3 times for Main Menu "
+                + "\nQ -- Quit Help Menu "
                 + "\n--------------------------------------------------";
 
         this.promptMessage = "\nPlease choose a Help Menu Option: ";
         // display the help menu
-        this.displayHelpMenuView();
+        //this.displayHelpMenuView();
     }
 
     public void displayHelpMenuView() {
