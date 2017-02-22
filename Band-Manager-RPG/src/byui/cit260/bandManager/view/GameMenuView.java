@@ -23,15 +23,12 @@ public class GameMenuView {
                 + "\n--------------------------------------------------"
                 + "\nM -- View Map"
                 + "\nA -- Asset Menu"
-                + "\nE -- Purchase equipment"
-                + "\nV -- Purchase vehicle"
                 + "\nH -- Hold audition"
                 + "\nT -- Travel to a new location"
                 + "\nX -- Check-in to hotel" 
                 + "\nR -- Rehearsal" 
                 + "\nP -- Venue performance" 
-                + "\nB -- View band members and status" 
-                + "\nL -- Check loan status/make payment"                 
+                + "\nB -- View band members and status"                 
                 + "\nS -- Save game"
                 + "\nQ -- Quit Game Menu"
                 + "\n--------------------------------------------------";
@@ -91,12 +88,6 @@ public class GameMenuView {
             case "A": // display the asset menu
                 this.assetMenu();
                 break;
-            case "E": // display the purchase equipment view
-                this.purchaseEquipment();
-                break;
-            case "V": // display the purchase vehicle view
-                this.purchaseVehicle();
-                break;
             case "H": // display audition view
                 this.holdAudition();
                 break;
@@ -114,9 +105,6 @@ public class GameMenuView {
                 break;
             case "B": // view band members and status
                 this.bandStatus();
-                break;
-            case "L": // pay on loan
-                this.payLoan();
                 break;   
             case "S": // save the current game
                 this.saveGame();
@@ -137,15 +125,9 @@ public class GameMenuView {
     }
 
     private void assetMenu() {
-        System.out.println("*** assetMenu function called ***");         
-    }
-
-    private void purchaseEquipment() {
-        System.out.println("*** purchaseEquipment function called ***");        
-    }
-
-    private void purchaseVehicle() {
-        System.out.println("*** purchaseVehicle function called ***");        
+        // display the help menu
+        AssetMenuView assetMenu = new AssetMenuView();
+        assetMenu.displayAssetMenuView();        
     }
 
     private void holdAudition() {
@@ -170,10 +152,6 @@ public class GameMenuView {
 
     private void bandStatus() {
         System.out.println("*** bandStatus function called ***");  
-    }
-
-    private void payLoan() {
-        System.out.println("*** payLoan function called ***"); 
     }
 
     private void saveGame() {
