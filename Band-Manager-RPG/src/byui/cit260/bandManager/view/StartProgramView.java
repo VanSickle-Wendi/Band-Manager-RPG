@@ -59,7 +59,7 @@ public class StartProgramView {
                 + "\n* runs out of money or the band plays two bad gigs in a *"
                 + "\n* row.  After the band has passed level 4, they go to   *"
                 + "\n* ‘the big star party.’ Your accountant is there and    *"
-                + "\n* tells you your net worth and star status              *"
+                + "\n* tells you your net worth and star status.             *"
         );
 
     }

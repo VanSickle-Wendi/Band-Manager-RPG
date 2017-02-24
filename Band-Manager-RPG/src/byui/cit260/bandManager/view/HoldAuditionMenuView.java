@@ -74,10 +74,12 @@ class HoldAuditionMenuView {
     public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); // convert choice to upper case
-        
+        int skillLevel;
         switch (choice) {
             case "D": // drummer
-                this.drummer();
+                skillLevel = this.drummer();
+                //todo add the drummer to the band somehow
+                System.out.println("Drummer's skill level is " + skillLevel);
                 break;
             case "G": // guitarist
                 this.guitarist();
@@ -102,8 +104,10 @@ class HoldAuditionMenuView {
         return false;
     }    
 
-    private void drummer() {
-        System.out.println("*** drummer function called ***");        
+    private int drummer() {     
+        // display the drummer aution view
+        DrummerAuditionView drummerAudition = new DrummerAuditionView();
+        return drummerAudition.displayDrummerAuditionView();
     }
 
     private void guitarist() {
